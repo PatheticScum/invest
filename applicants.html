@@ -1,0 +1,168 @@
+{% load static %}
+<!DOCTYPE html>
+<html style="font-size: 16px;" lang="en">
+    
+
+<head>
+    <link id="u-theme-google-font" rel="stylesheet"
+        href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i|Open+Sans:300,300i,400,400i,500,500i,600,600i,700,700i,800,800i">
+    <link rel="stylesheet" href="{% static 'css/applicants.css' %}" />
+    <link rel="stylesheet" href="{% static 'css/applicants.dop.css' %}" />
+
+    <script type="application/ld+json">
+        {
+            "@context": "http://schema.org",
+            "@type": "Organization",
+            "name": "логистика"
+        }
+    </script>
+</head>
+
+<body class="u-body u-xl-mode">
+    <section class="u-align-center u-clearfix u-white u-section-1" id="sec-9a96">
+        <div class="u-align-left u-clearfix u-sheet u-sheet-1">
+            <h1 class="u-align-center u-text u-text-default u-text-1">Application form</h1>
+            <div class="u-form u-form-1">
+                <form action="#" method="POST" class="u-clearfix u-form-spacing-10 u-form-vertical u-inner-form"
+                    source="custom" name="form" style="padding: 10px;">
+                    <div class="u-form-group u-form-name u-label-top">
+                        <label for="name-a4e9"
+                            class="u-custom-font u-label u-text-custom-color-2 u-text-font u-label-1">
+                            Full name</label>
+                        <input type="text" placeholder="Enter your name" id="name-a4e9" name="name"
+                            class="u-border-1 u-border-black u-input u-input-rectangle u-radius-15 u-input-1"
+                            required="">
+                    </div>
+                    <div class="u-form-group u-form-phone u-label-top u-form-group-2">
+                        <label for="phone-c753"
+                            class="u-custom-font u-label u-text-custom-color-2 u-text-font u-label-2">Telephone</label>
+                        <input type="tel"
+                            pattern="\+?\d{0,3}[\s\(\-]?([0-9]{2,3})[\s\)\-]?([\s\-]?)([0-9]{3})[\s\-]?([0-9]{2})[\s\-]?([0-9]{2})"
+                            placeholder="Phone in the format +996" id="phone-c753" name="phone"
+                            class="u-border-1 u-border-black u-input u-input-rectangle u-radius-15 u-input-2"
+                            required="">
+                    </div>
+                    <div class="u-form-email u-form-group u-label-top">
+                        <label for="email-a4e9"
+                            class="u-custom-font u-label u-text-custom-color-2 u-text-font u-label-3">Email</label>
+                        <input type="email" placeholder="Enter your email address" id="email-a4e9" name="email"
+                            class="u-border-1 u-border-black u-input u-input-rectangle u-radius-15 u-input-3"
+                            required="">
+                    </div>
+                    <div class="u-form-group u-label-top u-form-group-4">
+                        <label for="text-1bcf"
+                            class="u-custom-font u-label u-text-custom-color-2 u-text-font u-label-4">Name
+                            project</label>
+                        <input type="text" id="text-1bcf" name="text"
+                            class="u-border-1 u-border-black u-input u-input-rectangle u-radius-15 u-input-4"
+                            placeholder="Enter the name of the project">
+                    </div>
+                    <div class="u-form-group u-label-top u-form-group-4">
+                        <label for="text-1bcf" class="u-custom-font u-label u-text-custom-color-2 u-text-font u-label-4 file-btn">
+                            File upload</label>
+                        <input type="file" id="text-1bcf" name="file" class="u-border-1 u-border-black u-input u-input-rectangle u-radius-15 u-input-4" placeholder="Ведите название проекта">
+                      </div>
+                    <div class="u-form-group u-form-textarea u-label-top u-form-group-5">
+                        <label for="textarea-8c86"
+                            class="u-custom-font u-label u-text-custom-color-2 u-text-font u-label-5">Brief
+                            essence of the project</label>
+                        <textarea rows="4" cols="50" id="textarea-8c86" name="textarea"
+                            class="u-border-1 u-border-black u-input u-input-rectangle u-radius-15 u-input-5"
+                            required="" placeholder="Describe the project"></textarea>
+                    </div>
+                    <div class="u-form-group u-label-top u-form-group-6">
+                        <label for="text-5374"
+                            class="u-custom-font u-label u-text-custom-color-2 u-text-font u-label-6">Sphere
+                            activities</label>
+                        <input type="text" placeholder="Enter the name of the activity" id="text-5374" name="text-1"
+                            class="u-border-1 u-border-black u-input u-input-rectangle u-radius-15 u-input-6">
+                    </div>
+                    <div class="u-form-date u-form-group u-label-top u-form-group-7">
+                        <label for="date-59e3"
+                            class="u-custom-font u-label u-text-custom-color-2 u-text-font u-label-7">The date
+                            base</label>
+                        <input type="date" placeholder="MM/DD/YYYY" id="date-59e3" name="date"
+                            class="u-border-1 u-border-black u-input u-input-rectangle u-radius-15 u-input-7"
+                            required="">
+                    </div>
+                    <div class="u-form-group u-label-top u-form-group-8">
+                        <label for="text-f110"
+                            class="u-custom-font u-label u-text-custom-color-2 u-text-font u-label-8">Address
+                            registration</label>
+                        <input type="text" placeholder="Enter the address" id="text-f110" name="text-2"
+                            class="u-border-1 u-border-black u-input u-input-rectangle u-radius-15 u-input-8">
+                    </div>
+                    <div class="u-form-group u-label-top u-form-group-9">
+                        <label for="text-511a"
+                            class="u-custom-font u-label u-text-custom-color-2 u-text-font u-label-9">Actual
+                            place of business</label>
+                        <input type="text" placeholder="" id="text-511a" name="text-3"
+                            class="u-border-1 u-border-black u-input u-input-rectangle u-radius-15 u-input-9">
+                    </div>
+                    <div class="u-form-group u-form-partition-factor-3 u-label-top u-form-group-10">
+                        <label for="text-4822"
+                            class="u-custom-font u-label u-text-custom-color-2 u-text-font u-label-10">Requested
+                            sum </label>
+                        <input type="text" placeholder="Dollar" id="text-4822" name="text-4"
+                            class="u-border-1 u-border-black u-input u-input-rectangle u-radius-15 u-input-10">
+                    </div>
+                    <div class="u-form-group u-form-partition-factor-3 u-label-top u-form-group-11">
+                        <label for="text-c9cb"
+                            class="u-custom-font u-label u-text-custom-color-2 u-text-font u-label-11">Term
+                            payback </label>
+                        <input type="text" placeholder="How many years" id="text-c9cb" name="text-6"
+                            class="u-border-1 u-border-black u-input u-input-rectangle u-radius-15 u-input-11">
+                    </div>
+                    <div class="u-form-group u-form-partition-factor-3 u-label-top u-form-group-12">
+                        <label for="text-1525"
+                            class="u-custom-font u-label u-text-custom-color-2 u-text-font u-label-12">Yield</label>
+                        <input type="text" placeholder="Dollar" id="text-1525" name="text-5"
+                            class="u-border-1 u-border-black u-input u-input-rectangle u-radius-15 u-input-12">
+                    </div>
+                    <div class="u-form-group u-form-textarea u-label-top u-form-group-13">
+                        <label for="textarea-ca54"
+                            class="u-custom-font u-label u-text-custom-color-2 u-text-font u-label-13">Availability
+                            investment
+                            documents</label>
+                        <textarea rows="4" cols="50" id="textarea-ca54" name="textarea-1"
+                            class="u-border-1 u-border-black u-input u-input-rectangle u-radius-15 u-input-13"
+                            required="" placeholder="Business plan, feasibility study, summary, etc."></textarea>
+                    </div>
+                    <div class="u-form-group u-label-top u-form-group-14">
+                        <label for="text-b3c9"
+                            class="u-custom-font u-label u-text-custom-color-2 u-text-font u-label-14">Available
+                            assets</label>
+                        <input type="text" placeholder="" id="text-b3c9" name="text-7"
+                            class="u-border-1 u-border-black u-input u-input-rectangle u-radius-15 u-input-14">
+                    </div>
+                    <div class="u-form-group u-label-top u-form-group-15">
+                        <label for="text-d5cb"
+                            class="u-custom-font u-label u-text-custom-color-2 u-text-font u-label-15">Own contribution
+                        </label>
+                        <input type="text" placeholder="Dollar" id="text-d5cb" name="text-8"
+                            class="u-border-1 u-border-black u-input u-input-rectangle u-radius-15 u-input-15">
+                    </div>
+                    <div class="u-form-group u-form-textarea u-label-top u-form-group-16">
+                        <label for="textarea-e6f4"
+                            class="u-custom-font u-label u-text-custom-color-2 u-text-font u-label-16">Comments</label>
+                        <textarea rows="4" cols="50" id="textarea-e6f4" name="textarea-2"
+                            class="u-border-1 u-border-black u-input u-input-rectangle u-radius-15 u-input-16"
+                            required="" placeholder="Leave a review "></textarea>
+                    </div>
+                    <div class="u-align-center u-form-group u-form-submit u-label-top">
+                        <input type="submit" value="submit" class="u-form-control-hidden">
+                        <button href="#"
+                            class="u-border-1 u-border-custom-color-2 u-btn u-btn-round u-btn-submit u-button-style u-hover-custom-color-2 u-none u-radius-15 u-btn-1">Отправить</button>
+                    </div>
+                    <div class="u-form-send-message u-form-send-success"> Thank you! Your message has been sent. </div>
+                    <div class="u-form-send-error u-form-send-message"> Sending failed. Please fix
+                        mistakes and
+                        try again. </div>
+                    <input type="hidden" value="" name="recaptchaResponse">
+                </form>
+            </div>
+        </div>
+    </section>
+</body>
+
+</html>

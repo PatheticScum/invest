@@ -1,0 +1,1103 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+   <meta http-equiv="X-UA-Compatible" content="ie=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Invest Center</title>
+   <!-- CSS only -->
+   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+      integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+   <!-- favicon -->
+   <!-- JavaScript Bundle with Popper -->
+   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous">
+   </script>
+   <link rel="shortcut icon" href="{% static 'img/favicon.png' %}" type="image/x-icon">
+   <!-- bootstrap css -->
+   <link rel="stylesheet" href="{% static 'css/bootstrap.min.css'%}">
+   <!-- fontawesome css -->
+   <link rel="stylesheet" href="{% static 'css/fontawesome.min.css' %}">
+   <!-- flaticon css -->
+   <link rel="stylesheet" href="{% static 'css/flaticon.css' %}">
+   <!-- owl carousel css -->
+   <link rel="stylesheet" href="{% static 'css/owl.carousel.min.css' %}">
+   <!-- owl carousel theme css -->
+   <link rel="stylesheet" href="{% static 'css/owl.theme.default.min.css' %}">
+   <!-- slicknav css -->
+   <link rel="stylesheet" href="{% static 'css/slicknav.css'%}">
+   <!-- main css -->
+   <link rel="stylesheet" href="{% static 'css/style.css'%}">
+   <!-- responsive css -->
+   <link rel="stylesheet" href="{% static 'css/responsive.css' %}">
+   <link rel="stylesheet" href="{% static 'css/uicons-regular-rounded/css/uicons-regular-rounded.css' %}">
+   <!-- jquery js -->
+   <script src="{% static 'js/jquery-3.3.1.min.js' %}"></script>
+
+   <!-- map css -->
+   <link rel="stylesheet" href="{% static 'css/map.css' %}">
+   <link rel="stylesheet" href="{% static 'css/map.dop.css' %}">
+   <link rel="stylesheet" href="{% static 'css/aboutkr.css' %}">
+   <link rel="stylesheet" href="{% static 'css/aboutkr.dop.css' %}">
+</head>
+
+
+
+
+<body>
+   <!--   header area start   -->
+   <div class="header-area header-absolute">
+      <div class="container">
+         <div class="support-bar-area">
+            <div class="row">
+               <div class="col-lg-6 support-contact-info">
+                  <span class="address"><i class="flaticon-placeholder"></i>Абдумомунова 220А</span>
+                  <span class="phone"><i class="flaticon-chat"></i>+996 708 899 889</span>
+               </div>
+               <div class="col-lg-6 text-right">
+                  <ul class="social-links">
+                     <li><a href="https://api.whatsapp.com/send?phone=996708899889&text=%D0%94%D0%BE%D0%B1%D1%80%D1%8B%D0%B9%20%D0%B4%D0%B5%D0%BD%D1%8C."><i class="fab fa-whatsapp"></i></a></li>
+                     <li><a href="https://www.instagram.com/invest.center.kg/"><i class="fab fa-instagram"></i></a></li>
+                  </ul>
+                  <div class="language">
+                     <a class="language-btn" href="{% url 'home_ru' %}"><i class="flaticon-worldwide"></i>
+                        Русский</a>
+                     <ul class="language-dropdown">
+                        <li><a href="{% url 'home' %}">English</a></li>
+                     </ul>
+                  </div>
+               </div>
+               <div class="input-group col-lg-4 searchBar">
+                  <div class="form-outline">
+                    <input id="search-focus" type="search" id="form1" class="" placeholder="Search..." />
+                  </div>
+                  <button type="button" class="ml-3">
+                    <i class="fi-rr-search text-right"></i>
+                  </button>
+                  <button type="button" class="ml-2" data-bs-toggle="modal" data-bs-target="#exampleModalFilter">
+                    <i class="fi-rr-settings-sliders"></i>
+                </div>
+      
+              </div>
+      
+            </div>
+         <div class="header-navbar">
+            <div class="row">
+               <div class="col-lg-2 col-6">
+                  <div class="logo-wrapper">
+                     <a href="{% url 'home_ru' %}"><img src="../static/NewImage/Logo_invest.png" alt=""></a>
+                  </div>
+               </div>
+               <div class="col-lg-10 col-6 text-right position-static">
+                  <ul class="main-menu" id="mainMenu">
+                     <li class="active">
+                        <a class="dropdown-btn" href="#">Главная</a>
+                     </li>
+                     <li><a href="{% url 'about_ru' %}">О компании</a></li>
+                     <li class="dropdown">
+                        <a class="dropdown-btn" href="{% url 'all_ru' %}">Проекты</a>
+                        <ul class="dropdown-lists ">
+                           {% comment %} <li><a href="{% url 'all_ru' %}">Все проекты</a></li> {% endcomment %}
+                           <li><a href="{% url 'production_ru' %}">Производство</a></li>
+                           <li><a href="{% url 'IT_ru' %}">It</a></li>
+                           <li><a href="{% url 'commerce_ru' %}">Коммерция</a></li>
+                           <li><a href="{% url 'energy_ru' %}">Энергетика</a></li>
+                           <li><a href="{% url 'place_ru' %}">месторождения</a></li>
+                        </ul>
+                     </li>
+                     <li><a href="{% url 'contact_ru' %}">Контакты</a></li>
+                     <li><a href="{% url 'applicants_ru' %}" class="boxed-btn">Отправить заявку</a></li>
+                  </ul>
+                  <div id="mobileMenu"></div>
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+   <!--   header area end   -->
+
+
+   <!--   hero area start   -->
+   <div class="hero-area hero-bg ">
+      <div id="particles-js"></div> <!-- stats - count particles -->
+   <!-- particles.js lib - https://github.com/VincentGarreau/particles.js -->
+   <script src="http://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script> <!-- stats.js lib -->
+   <script src="http://threejs.org/examples/js/libs/stats.min.js"></script>
+      <div class="container">
+         <div class="hero-txt">
+            <div class="row">
+               <div class="col-12">
+                 <div class='sign-wrap-3'>
+                  <span class='sign_word'>INVEST-CENTER</span>
+                 </div>
+                  <h1>Объединяем эффективные бизнес-проекты, усиливаем и увеличиваем их потенциал. Помогаем привлечь инвестиции, запустить и масштабировать бизнес.</h1>
+                  <a href="{% url 'about' %}" class="hero-boxed-btn">Подробнее</a>
+               </div>
+            </div>
+         </div>
+      </div>
+      <div class="hero-area-overlay"></div>
+   </div>
+   <!--   hero area end    -->
+
+
+   <!--    introduction area start   -->
+   <div class="container">
+      <div class="intro-section">
+         <div class="container">
+            <div class="hero-features">
+               <div class="row">
+                  <div class="col-md-3 col-sm-6 single-hero-feature">
+                     <div class="outer-container">
+                        <div class="inner-container">
+                           <div class="icon-wrapper">
+                              <i class="flaticon-briefcase"></i>
+                           </div>
+                           <h3>Финансовые
+                              консультации
+                           </h3>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="col-md-3 col-sm-6 single-hero-feature">
+                     <div class="icon-wrapper">
+                        <i class="flaticon-wallet"></i>
+                     </div>
+                     <h3>Совет
+                        Инвестиции
+                     </h3>
+                  </div>
+                  <div class="col-md-3 col-sm-6 single-hero-feature">
+                     <div class="icon-wrapper">
+                        <i class="flaticon-chart"></i>
+                     </div>
+                     <h3>Управление
+                        рисками</h3>
+                  </div>
+                  <div class="col-md-3 col-sm-6 single-hero-feature">
+                     <div class="icon-wrapper">
+                        <i class="flaticon-profits"></i>
+                     </div>
+                     <h3>Бухгалтерский учет</h3>
+                  </div>
+               </div>
+            </div>
+            <div class="row">
+               <div class="col-lg-6 pr-0">
+                  <div class="intro-txt">
+                     <p class="h3">О нас</p>
+                     <h2 class="section-summary">Обеспечиваем развите и привликаем инвестициию Помогаем решать сложные
+                        задачи на стыке отношений бизнеса и власти </h2>
+                     <a href="{% url 'about_ru' %}" class="intro-btn"><span>Подробнее</span></a>
+                  </div>
+               </div>
+               <div class="col-lg-6 pl-lg-0 px-md-3 px-0">
+                  <div class="intro-bg"></div>
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+   <!--    introduction area end   -->
+
+
+   <!--   how we do section start   -->
+   <div class="container">
+      <div class="choose-us">
+         <div class="row">
+            <div class="col-lg-6 col-md-6">
+               <h2 class="section-summary">
+                  Наши примущество
+               </h2>
+            </div>
+         </div>
+         <div class="row">
+            <div class="col-lg-4 col-md-3">
+               <div class="single-reason">
+                  <div class="about-icon-wrapper">
+                     <i class=" fi-rr-comment-check"></i></div>
+                  <div class="reason-txt">
+                     <h4>Решения</h4>
+                     <p>Формулируем проблему, предлагаем оптимальное решение, добиваемся результата</p>
+                  </div>
+               </div>
+            </div>
+            <div class="col-lg-4 col-md-3">
+               <div class="single-reason">
+                  <div class="about-icon-wrapper"> <i class="fi-rr-pan"></i></div>
+                  <div class="reason-txt">
+                     <h4>
+                        Экспертиза</h4>
+                     <p>Уникальная команда с многолетним опытом работы в GR, юриспруденции, стратегическом и
+                        инвестиции
+                        консультирование</p>
+                  </div>
+               </div>
+            </div>
+            <div class="col-lg-4 col-md-3">
+               <div class="single-reason">
+                  <div class="about-icon-wrapper"> <i class="fi-rr-tachometer-alt-fastest"></i> </div>
+                  <div class="reason-txt">
+                     <h4>Скорость</h4>
+                     <p>Мы ценим время. Мы не говорим, что мы сделаем для вас завтра, потому что мы это сделали.
+                        вчера</p>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+   <!--   how we do section end   -->
+
+
+
+
+
+   <!--    case section start   -->
+   <!-- <div class="case-section">
+         <div class="container">
+            <div class="row">
+               <div class="col-lg-6">
+                  <h2 class="section-summary">Свежий подход к финансовым услугам для предпринимателей</h2>
+               </div>
+            </div>
+         </div>
+         <div class="container-fluid">
+            <div class="row">
+               <div class="col-md-12">
+                  <div class="case-carousel owl-carousel owl-theme">
+                     <div class="single-case single-case-bg-1">
+                        <div class="outer-container">
+                           <div class="inner-container">
+                              <h4>Как выбрать тренера по малому бизнесу</h4>
+                              <p>Финансовые услуги</p>
+                              <a href="{% url 'case_details_ru' %}" class="readmore-btn"><span>Подробнее</span></a>
+                           </div>
+                        </div>
+                     </div>
+                     <div class="single-case single-case-bg-2">
+                        <div class="outer-container">
+                           <div class="inner-container">
+                              <h4>Как выбрать тренера по малому бизнесу</h4>
+                              <p>Финансовые услуги</p>
+                              <a href="{% url 'case_details_ru' %}" class="readmore-btn"><span>Подробнее</span></a>
+                           </div>
+                        </div>
+                     </div>
+                     <div class="single-case single-case-bg-3">
+                        <div class="outer-container">
+                           <div class="inner-container">
+                              <h4>Как выбрать тренера по малому бизнесу</h4>
+                              <p>Финансовые услуги</p>
+                              <a href="{% url 'case_details_ru' %}" class="readmore-btn"><span>Подробнее</span></a>
+                           </div>
+                        </div>
+                     </div>
+                     <div class="single-case single-case-bg-4">
+                        <div class="outer-container">
+                           <div class="inner-container">
+                              <h4>Как выбрать тренера по малому бизнесу</h4>
+                              <p>Финансовые услуги</p>
+                              <a href="{% url 'case_details_ru' %}" class="readmore-btn"><span>Подробнее</span></a>
+                           </div>
+                        </div>
+                     </div>
+                     <div class="single-case single-case-bg-5">
+                        <div class="outer-container">
+                           <div class="inner-container">
+                              <h4>Как выбрать тренера по малому бизнесу</h4>
+                              <p>Финансовые услуги</p>
+                              <a href="{% url 'case_details_ru' %}" class="readmore-btn"><span>Подробнее</span></a>
+                           </div>
+                        </div>
+                     </div>
+                     <div class="single-case single-case-bg-6">
+                        <div class="outer-container">
+                           <div class="inner-container">
+                              <h4>Как выбрать тренера по малому бизнесу</h4>
+                              <p>Финансовые услуги</p>
+                              <a href="{% url 'case_details_ru' %}" class="readmore-btn"><span>Подробнее</span></a>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div> -->
+   <!--    case section end   -->
+
+
+   <!--   Testimonial section start    -->
+   <div class="testimonial-section pb-115 mt-5">
+      <div class="container">
+         <div class="row">
+            <div class="col-lg-6">
+               <span class="section-title">Отзывы</span>
+               <h2 class="section-summary">Что люди говорят о финансовом планировании</h2>
+            </div>
+         </div>
+         <div class="row">
+            <div class="col-md-12">
+               <div class="testimonial-carousel owl-carousel owl-theme">
+                  <div class="single-testimonial">
+                     <div class="img-wrapper"><img src="assets/img/testimonial/client-1.jpg" alt=""></div>
+                     <div class="client-desc">
+                        <p class="comment">
+                           Они предлагают инновационные решения с лучшими. tempor incididunt utla bore et dolor tempor
+                           incididunt .</p>
+                        <h6 class="name">Джонатон Доу</h6>
+                        <p class="rank">Директор, арт-медиа</p>
+                     </div>
+                  </div>
+                  <div class="single-testimonial">
+                     <div class="img-wrapper"><img src="assets/img/testimonial/client-2.jpg" alt=""></div>
+                     <div class="client-desc">
+                        <p class="comment">
+                           Они предлагают инновационные решения с лучшими. tempor incididunt utla bore et dolor tempor
+                           incididunt .</p>
+                        <h6 class="name">Джонатон Доу</h6>
+                        <p class="rank">Директор, арт-медиа</p>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+   <!--   Testimonial section end    -->
+
+
+   <!--    team section start   -->
+   <div class="u-body u-xl-mode">
+      <section class="u-align-center u-clearfix u-section-1" id="sec-70cf">
+        <h3 class="aboutKR">О Кыргызстане</h3>
+        <div class="u-clearfix u-sheet u-sheet-1">
+          <img class="u-expanded-width-xs u-image u-image-contain u-image-round u-radius-35 u-image-1"
+            src="../static/NewImage/Kyrgyzstan_map_map.svg" data-image-width="1644" data-image-height="829" />
+          <button
+            class="u-border-none u-btn u-button-style u-custom-font u-font-georgia u-none u-text-custom-color-2 u-btn-1 btn btn-success btn-lg"
+            data-toggle="modal" data-target="#exampleModalChuy">
+            Бишкек
+          </button>
+          <button
+            class="u-border-none u-btn u-button-style u-custom-font u-font-georgia u-none u-text-custom-color-2 u-btn-2 btn btn-success btn-lg"
+            data-toggle="modal" data-target="#exampleModalIK">
+            Иссык-Куль
+          </button>
+          <button
+            class="u-border-none u-btn u-button-style u-custom-font u-font-georgia u-none u-text-custom-color-2 u-btn-3 btn btn-success btn-lg"
+            data-toggle="modal" data-target="#exampleModalBt">
+            Баткен
+          </button>
+          <button
+            class="u-border-none u-btn u-button-style u-custom-font u-font-georgia u-none u-text-custom-color-2 u-btn-4 btn btn-success btn-lg"
+            data-toggle="modal" data-target="#exampleModalTa">
+            Талас
+          </button>
+          <button
+            class="u-border-none u-btn u-button-style u-custom-font u-font-georgia u-none u-text-custom-color-2 u-btn-5 btn btn-success btn-lg"
+            data-toggle="modal" data-target="#exampleModalJa">
+            Джалал-Абад
+          </button>
+          <button
+            class="u-border-none u-btn u-button-style u-custom-font u-font-georgia u-none u-text-custom-color-2 u-btn-6 btn btn-success btn-lg"
+            data-toggle="modal" data-target="#exampleModalNa">
+            Нарын<br />
+          </button>
+          <button href="https://nicepage.com/k/card-html-templates"
+            class="u-border-none u-btn u-button-style u-custom-font u-font-georgia u-none u-text-custom-color-2 u-btn-7 btn btn-success btn-lg"
+            data-toggle="modal" data-target="#exampleModalOsh">
+            Ош
+          </button>
+          {% comment %} <a href="{% url 'kr' %}"
+            class="u-align-center u-border-1 u-border-custom-color-2 u-btn u-btn-round u-button-style u-hover-custom-color-2 u-none u-radius-20 u-text-hover-white u-btn-8">
+            About Kyrgyzstan<br />
+          </a> {% endcomment %}
+        </div>
+      </section>
+    </div>
+  
+  
+  
+    <body class="u-body u-xl-mode">
+      <section
+        class="u-align-center u-clearfix u-grey-5 u-section-1 section-about"
+        id="carousel_b1e0"
+      >
+        <div class="u-clearfix u-sheet u-sheet-1">
+          <h5 class="u-text u-text-1 about-text">
+            Основные макроэкономические показатели в январе-марте 2022 года
+          </h5>
+          <div class="u-expanded-width u-list u-list-1">
+            <div class="u-repeater u-repeater-1">
+              <div
+                class="u-align-center u-border-1 u-border-custom-color-2 u-container-style u-custom-item u-list-item u-radius-35 u-repeater-item u-shape-round u-list-item-1"
+                data-animation-name=""
+                data-animation-duration="0"
+                data-animation-delay="0"
+                data-animation-direction=""
+              >
+                <div
+                  class="u-container-layout u-similar-container u-valign-middle u-container-layout-1"
+                >
+                  <span class="u-file-icon u-icon u-text-custom-color-2 u-icon-1"
+                    ><img src="../static/logoKR/8.png" alt=""
+                  /></span>
+                  <h5
+                    class="u-custom-font u-font-merriweather u-text u-text-default u-text-2"
+                  >
+                    Население-6.7<br />
+                  </h5>
+                  <p class="u-text u-text-3">На 01.03.2022г, млн человек</p>
+                </div>
+              </div>
+              <div
+                class="u-align-center u-border-1 u-border-custom-color-2 u-container-style u-custom-item u-list-item u-radius-35 u-repeater-item u-shape-round u-list-item-2"
+                data-animation-name=""
+                data-animation-duration="0"
+                data-animation-delay="0"
+                data-animation-direction=""
+              >
+                <div
+                  class="u-container-layout u-similar-container u-valign-middle u-container-layout-2"
+                >
+                  <span class="u-file-icon u-icon u-text-custom-color-2 u-icon-2"
+                    ><img src="../static/logoKR/9.png" alt=""
+                  /></span>
+                  <h5
+                    class="u-custom-font u-font-merriweather u-text u-text-default u-text-4"
+                  >
+                    Сельское хозяйство-102.3%
+                  </h5>
+                  <p class="u-text u-text-5">text</p>
+                </div>
+              </div>
+              <div
+                class="u-align-center u-border-1 u-border-custom-color-2 u-container-style u-custom-item u-list-item u-radius-35 u-repeater-item u-shape-round u-list-item-3"
+                data-animation-name=""
+                data-animation-duration="0"
+                data-animation-delay="0"
+                data-animation-direction=""
+              >
+                <div
+                  class="u-container-layout u-similar-container u-valign-middle u-container-layout-3"
+                >
+                  <span class="u-file-icon u-icon u-text-custom-color-2 u-icon-3"
+                    ><img src="../static/logoKR/10.png" alt=""
+                  /></span>
+                  <h5
+                    class="u-custom-font u-font-merriweather u-text u-text-default u-text-6"
+                  >
+                    Промышленность<br />107.3%
+                  </h5>
+                  <p class="u-text u-text-7">Индекс физического объема</p>
+                </div>
+              </div>
+              <div
+                class="u-align-center u-border-1 u-border-custom-color-2 u-container-style u-custom-item u-list-item u-radius-35 u-repeater-item u-shape-round u-list-item-4"
+                data-animation-name=""
+                data-animation-duration="0"
+                data-animation-delay="0"
+                data-animation-direction=""
+              >
+                <div
+                  class="u-container-layout u-similar-container u-valign-middle u-container-layout-4"
+                >
+                  <span class="u-file-icon u-icon u-text-custom-color-2 u-icon-4"
+                    ><img src="../static/logoKR/11.png" alt=""
+                  /></span>
+                  <h5
+                    class="u-custom-font u-font-merriweather u-text u-text-default u-text-8"
+                  >
+                    Экспорт<br />103.8%
+                  </h5>
+                  <p class="u-text u-text-9">
+                    К январю-февралю&nbsp;<br />2021г в %
+                  </p>
+                </div>
+              </div>
+              <div
+                class="u-align-center u-border-1 u-border-custom-color-2 u-container-style u-custom-item u-list-item u-radius-35 u-repeater-item u-shape-round u-list-item-5"
+                data-animation-name=""
+                data-animation-duration="0"
+                data-animation-delay="0"
+                data-animation-direction=""
+              >
+                <div
+                  class="u-container-layout u-similar-container u-valign-middle u-container-layout-5"
+                >
+                  <span class="u-file-icon u-icon u-text-custom-color-2 u-icon-5"
+                    ><img src="../static/logoKR/12.png" alt=""
+                  /></span>
+                  <h5
+                    class="u-custom-font u-font-merriweather u-text u-text-default u-text-10"
+                  >
+                    Влоловой внутренний продукт-104.5%
+                  </h5>
+                  <p class="u-text u-text-11">
+                    К январю-марту&nbsp;<br />2021г в %
+                  </p>
+                </div>
+              </div>
+              <div
+                class="u-align-center u-border-1 u-border-custom-color-2 u-container-style u-custom-item u-list-item u-radius-35 u-repeater-item u-shape-round u-list-item-6"
+                data-animation-name=""
+                data-animation-duration="0"
+                data-animation-delay="0"
+                data-animation-direction=""
+              >
+                <div
+                  class="u-container-layout u-similar-container u-valign-middle u-container-layout-6"
+                >
+                  <span class="u-file-icon u-icon u-text-custom-color-2 u-icon-6"
+                    ><img src="../static/logoKR/13.png" alt=""
+                  /></span>
+                  <h5
+                    class="u-custom-font u-font-merriweather u-text u-text-default u-text-12"
+                  >
+                    Инвестиции в основной капитал<br />100.5%
+                  </h5>
+                  <p class="u-text u-text-13">
+                    К январю-марту&nbsp;<br />2021г в %
+                  </p>
+                </div>
+              </div>
+              <div
+                class="u-align-center u-border-1 u-border-custom-color-2 u-container-style u-custom-item u-list-item u-radius-35 u-repeater-item u-shape-round u-list-item-7"
+                data-animation-name=""
+                data-animation-duration="0"
+                data-animation-delay="0"
+                data-animation-direction=""
+              >
+                <div
+                  class="u-container-layout u-similar-container u-valign-middle u-container-layout-7"
+                >
+                  <span class="u-file-icon u-icon u-text-custom-color-2 u-icon-7"
+                    ><img src="../static/logoKR/14.png" alt=""
+                  /></span>
+                  <h5
+                    class="u-custom-font u-font-merriweather u-text u-text-default u-text-14"
+                  >
+                    Инфляция<br />5.0%
+                  </h5>
+                  <p class="u-text u-text-15">К декабрю 2021г</p>
+                </div>
+              </div>
+              <div
+                class="u-align-center u-border-1 u-border-custom-color-2 u-container-style u-custom-item u-list-item u-radius-35 u-repeater-item u-shape-round u-list-item-8"
+                data-animation-name=""
+                data-animation-duration="0"
+                data-animation-delay="0"
+                data-animation-direction=""
+              >
+                <div
+                  class="u-container-layout u-similar-container u-valign-middle u-container-layout-8"
+                >
+                  <span class="u-file-icon u-icon u-text-custom-color-2 u-icon-8"
+                    ><img src="../static/logoKR/15.png" alt=""
+                  /></span>
+                  <h5
+                    class="u-custom-font u-font-merriweather u-text u-text-default u-text-16"
+                  >
+                    Импорт<br />191.3%
+                  </h5>
+                  <p class="u-text u-text-17">
+                    К январю-марту&nbsp;<br />2021г в %
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+   <!--    team section end   -->
+
+
+   <!--    blog section start   -->
+   <div class="blog-section section-padding">
+      <div class="container">
+         <div class="row">
+            <div class="col-lg-6">
+               <span class="section-title">Наш блог</span>
+               <h2 class="section-summary">Ознакомьтесь с последними новостями в области финансов</h2>
+            </div>
+         </div>
+         <div class="row">
+            <div class="owl-carousel slider-sectffion owl-theme">
+               <div class="col-xxl-4 col-md-12">
+                  <div class="single-blog">
+                     <div class="blog-img-wrapper">
+                        <img src="assets/img/blog/blog-1.jpg" alt="">
+                     </div>
+                     <div class="blog-txt">
+                        <p class="date"><small>By <span class="username">Admin</span></small> | <small>07 Aug,
+                              2018</small> </p>
+                        <h4 class="blog-title"><a href="{% url 'blog_details_ru' %}">Survival Strategies to Ensure
+                              Business...</a></h4>
+                        <p class="blog-summary">consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                           labore et dolore magna aliqua.</p>
+                        <a href="{% url 'blog_details_ru' %}" class="readmore-btn"><span>Read More</span></a>
+                     </div>
+                  </div>
+               </div>
+               <div class="col-xxl-4 col-md-12">
+                  <div class="single-blog">
+                     <div class="blog-img-wrapper">
+                        <img src="assets/img/blog/blog-2.jpg" alt="">
+                     </div>
+                     <div class="blog-txt">
+                        <p class="date"><small>By <span class="username">Admin</span></small> | <small>07 Aug,
+                              2018</small> </p>
+                        <h4 class="blog-title"><a href="{% url 'blog_details_ru' %}">Invest $5000 for secure your
+                              policy...</a></h4>
+                        <p class="blog-summary">consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                           labore et dolore magna aliqua.</p>
+                        <a href="{% url 'blog_details_ru' %}" class="readmore-btn"><span>Read More</span></a>
+                     </div>
+                  </div>
+               </div>
+               <div class="col-xxl-4 col-md-12">
+                  <div class="single-blog">
+                     <div class="blog-img-wrapper">
+                        <img src="assets/img/blog/blog-3.jpg" alt="">
+                     </div>
+                     <div class="blog-txt">
+                        <p class="date"><small>By <span class="username">Admin</span></small> | <small>07 Aug,
+                              2018</small> </p>
+                        <h4 class="blog-title"><a href="{% url 'blog_details_ru' %}">More than 3k company join this
+                              year in...</a></h4>
+                        <p class="blog-summary">consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                           labore et dolore magna aliqua.</p>
+                        <a href="{% url 'blog_details_ru' %}" class="readmore-btn"><span>Read More</span></a>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+   <!--    blog section end   -->
+
+
+   <!--   partner section start    -->
+   <div class="partner-section">
+      <div class="container top-border">
+        <div class="row">
+          <div class="col-md-12">
+            <div class="partner-carousel owl-carousel owl-theme">
+              <div class="single-partner-item">
+                <div class="outer-container">
+                  <div class="inner-container">
+                    <img src="../static/NewImage/Logo_elite.png" alt="" />
+                  </div>
+                </div>
+              </div>
+              <div class="single-partner-item">
+                <div class="outer-container">
+                  <div class="inner-container">
+                    <img src="../static/NewImage/Alali.png" alt="" />
+                  </div>
+                </div>
+              </div>
+              <div class="single-partner-item">
+                <div class="outer-container">
+                  <div class="inner-container">
+                    <img src="..//static//NewImage/apLogo.png" alt="" />
+                  </div>
+                </div>
+              </div>
+              <div class="single-partner-item">
+                <div class="outer-container">
+                  <div class="inner-container">
+                    <img src="../static/NewImage/greateNomad.png" alt="" />
+                  </div>
+                </div>
+              </div>
+              <div class="single-partner-item">
+                <div class="outer-container">
+                  <div class="inner-container">
+                    <img src="../static/NewImage/Logo_invest.png" alt="" />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+
+
+    <div class="modal fade" id="exampleModalFilter" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h2>Фильтрация</h2>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <div class="html-body">
+              <div class="demo">
+                <div class="demo__title">Regions</div>
+                <div class="demo__content">
+                  <label class="switcher">
+                    <input type="checkbox"/>
+                    <div class="switcher__indicator"></div><span>Normal</span>
+                  </label><br/><br/>
+                  <label class="switcher">
+                    <input type="checkbox" checked="checked"/>
+                    <div class="switcher__indicator"></div><span>Checked</span>
+                  </label><br/><br/>
+                  <label class="switcher">
+                    <input type="checkbox" checked="checked"/>
+                    <div class="switcher__indicator"></div><span>Checked</span>
+                  </label><br/><br/>
+                  <label class="switcher">
+                    <input type="checkbox" checked="checked"/>
+                    <div class="switcher__indicator"></div><span>Checked</span>
+                  </label><br/><br/>
+                  <label class="switcher">
+                    <input type="checkbox" checked="checked"/>
+                    <div class="switcher__indicator"></div><span>Checked</span>
+                  </label><br/><br/>
+                  <label class="switcher">
+                    <input type="checkbox" checked="checked"/>
+                    <div class="switcher__indicator"></div><span>Checked</span>
+                  </label><br/><br/>
+                  <label class="switcher">
+                    <input type="checkbox" checked="checked"/>
+                    <div class="switcher__indicator"></div><span>Checked</span>
+                  </label><br/><br/>
+                  <label class="switcher">
+                    <input type="checkbox" checked="checked"/>
+                    <div class="switcher__indicator"></div><span>Checked</span>
+                  </label><br/><br/>
+                </div>
+              </div>
+              <div class="demo">
+                <div class="demo__title">Sums</div>
+                <div class="demo__content">
+                  <label class="switcher">
+                    <input type="checkbox"/>
+                    <div class="switcher__indicator"></div><span>Normal</span>
+                  </label><br/><br/>
+                  <label class="switcher">
+                    <input type="checkbox" checked="checked"/>
+                    <div class="switcher__indicator"></div><span>Checked</span>
+                  </label><br/><br/>
+                  <label class="switcher">
+                    <input type="checkbox" checked="checked"/>
+                    <div class="switcher__indicator"></div><span>Checked</span>
+                  </label><br/><br/>
+                  <label class="switcher">
+                    <input type="checkbox" checked="checked"/>
+                    <div class="switcher__indicator"></div><span>Checked</span>
+                  </label><br/><br/>
+                  <label class="switcher">
+                    <input type="checkbox" checked="checked"/>
+                    <div class="switcher__indicator"></div><span>Checked</span>
+                  </label><br/><br/>
+                  <label class="switcher">
+                    <input type="checkbox" checked="checked"/>
+                    <div class="switcher__indicator"></div><span>Checked</span>
+                  </label><br/><br/>
+                  <label class="switcher">
+                    <input type="checkbox" checked="checked"/>
+                    <div class="switcher__indicator"></div><span>Checked</span>
+                  </label><br/><br/>
+                  <label class="switcher">
+                    <input type="checkbox" checked="checked"/>
+                    <div class="switcher__indicator"></div><span>Checked</span>
+                  </label><br/><br/>
+                </div>
+              </div>
+  
+              <div class="demo">
+                <div class="demo__title">Industries</div>
+                <div class="demo__content">
+                  <label class="switcher">
+                    <input type="checkbox"/>
+                    <div class="switcher__indicator"></div><span>Normal</span>
+                  </label><br/><br/>
+                  <label class="switcher">
+                    <input type="checkbox" checked="checked"/>
+                    <div class="switcher__indicator"></div><span>Checked</span>
+                  </label><br/><br/>
+                  <label class="switcher">
+                    <input type="checkbox" checked="checked"/>
+                    <div class="switcher__indicator"></div><span>Checked</span>
+                  </label><br/><br/>
+                  <label class="switcher">
+                    <input type="checkbox" checked="checked"/>
+                    <div class="switcher__indicator"></div><span>Checked</span>
+                  </label><br/><br/>
+                  <label class="switcher">
+                    <input type="checkbox" checked="checked"/>
+                    <div class="switcher__indicator"></div><span>Checked</span>
+                  </label><br/><br/>
+                  <label class="switcher">
+                    <input type="checkbox" checked="checked"/>
+                    <div class="switcher__indicator"></div><span>Checked</span>
+                  </label><br/><br/>
+                  <label class="switcher">
+                    <input type="checkbox" checked="checked"/>
+                    <div class="switcher__indicator"></div><span>Checked</span>
+                  </label><br/><br/>
+                  <label class="switcher">
+                    <input type="checkbox" checked="checked"/>
+                    <div class="switcher__indicator"></div><span>Checked</span>
+                  </label><br/><br/>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+   <!--   partner section end    -->
+
+   <!--    call to action section start    -->
+   <!-- <div class="cta-section cta-bg">
+      <div class="container">
+         <div class="cta-content">
+            <div class="row">
+               <div class="col-md-9 col-lg-7">
+                  <h3>Свяжитесь с нами для информации.</h3>
+               </div>
+               <div class="col-md-3 col-lg-5 contact-btn-wrapper">
+                  <a href="{% url 'contact_ru' %}" class="boxed-btn contact-btn"><span>Связатса с нами</span></a>
+               </div>
+            </div>
+         </div>   
+      </div>
+      <div class="cta-overlay"></div>
+   </div> -->
+   <!--    call to action section end    -->
+
+   <!--    footer section start   -->
+   <footer class="footer-section">
+      <div class="container">
+         <div class="top-footer-section">
+            <div class="row">
+               <div class="col-lg-4 col-md-12">
+                  <div class="footer-logo-wrapper">
+                     <a href="{% url 'default_ru' %}">
+                        <img src="../static/NewImage/Logo_invest.png" alt="" />
+                     </a>
+                  </div>
+                  <p class="footer-txt">Для консолидации бизнес сообщества страны три успешных бизнесмена Кыргызстана:
+                     Тимур Файзиев, Кошматов Шаир и Мурзаев Талант решили создать компанию Инвест Центр.
+                     Компания официально прошла регистрацию 27 января 2022 года, и учредителями являются Кошматов
+                     Шаирбек Кошматович, Мурзаев Талантбек Аскарбекович и Аскаров Айбек Аскарович.
+                  </p>
+               </div>
+               <div class="col-lg-2 col-md-3">
+                  <h4>Полезные ссылки</h4>
+                  <ul class="footer-links">
+                    <li><a href="{% url 'home' %}">Главная</a></li>
+                    <li><a href="{% url 'about' %}">О компании</a></li>
+                    <li><a href="{% url 'all' %}">Все проекты</a></li>
+                    <li><a href="{% url 'contact' %}">Контакты</a></li>
+                  </ul>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                  <h4>Контакты</h4>
+                  <div class="footer-contact-info">
+                    <ul class="footer-address">
+                      <li>
+                        <i class="fa fa-home"></i><span>Абдумомунова 220A</span>
+                      </li>
+                      <li>
+                        <i class="fa fa-phone"></i><span>+996 708 899 889</span>
+                      </li>
+                      <li>
+                        <i class="far fa-envelope"></i><span>info@yourmail.com</span>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+         <div class="copyright-section">
+            <div class="row">
+               <div class="col-sm-7">
+                  <p class="text-left">
+                     © Copyrights 2022 Финансы. Все права защищены.</p>
+               </div>
+               <div class="col-sm-5">
+                  <p class="text-right">Разработано <strong>Zerosoft</strong></p>
+               </div>
+            </div>
+         </div>
+      </div>
+   </footer>
+   <!--    footer section end   -->
+
+
+   <!-- preloader section start -->
+   <div class="loader-container">
+      <span class="loader">
+         <span class="loader-inner"></span>
+      </span>
+   </div>
+   <!-- preloader section end -->
+
+
+   <!-- back to top area start -->
+   <div class="back-to-top">
+      <i class="fas fa-chevron-up"></i>
+   </div>
+   <!-- back to top area end -->
+
+
+
+   <!-- popper js -->
+   <script src="{% static 'js/popper.min.js' %}"></script>
+   <!-- bootstrap js -->
+   <script src="{% static 'js/bootstrap.min.js' %}"></script>
+   <!-- owl carousel js -->
+   <script src="{% static 'js/owl.carousel.min.js'%}"></script>
+   <!-- slicknav js -->
+   <script src="{% static 'js/jquery.slicknav.min.js'%}"></script>
+   <!-- isotope js -->
+   <script src="{% static 'js/isotope.pkgd.min.js'%}"></script>
+   <!-- particle js -->
+   <script src="{% static 'js/particles.min.js'%}"></script>
+   <!-- jquery ripples js -->
+   <script src="{% static 'js/jquery.ripples-min.js'%}"></script>
+   <!-- ytplayer js -->
+   <script src="{% static 'js/YTPlayer.min.js'%}"></script>
+   <!-- parallax js -->
+   <script src="{% static 'js/parallax.min.js'%}"></script>
+   <!-- main js -->
+   <script src="{% static 'js/main.js' %}"></script>
+   <script src="owlcarousel/owl.carousel.min.js"></script>
+   <!-- main js -->
+   <script src="{% static 'js/main.js' %}"></script>
+   <script src="{% static 'js/new.js' %}"></script>
+
+
+
+   <script>
+      particlesJS("particles-js", {
+    "particles": {
+        "number": {
+            "value": 123,
+            "density": {
+                "enable": true,
+                "value_area": 800
+            }
+        },
+        "color": {
+            "value": "#0090ff"
+        },
+        "shape": {
+            "type": "circle",
+            "stroke": {
+                "width": 0,
+                "color": "#0009ff"
+            },
+            "polygon": {
+                "nb_sides": 5
+            },
+            "image": {
+                "src": "img/github.svg",
+                "width": 100,
+                "height": 100
+            }
+        },
+        "opacity": {
+            "value": 0.5,
+            "random": false,
+            "anim": {
+                "enable": false,
+                "speed": 1,
+                "opacity_min": 0.1,
+                "sync": false
+            }
+        },
+        "size": {
+            "value": 5,
+            "random": true,
+            "anim": {
+                "enable": false,
+                "speed": 40,
+                "size_min": 0.1,
+                "sync": false
+            }
+        },
+        "line_linked": {
+            "enable": true,
+            "distance": 150,
+            "color": "#ffffff",
+            "opacity": 0.4,
+            "width": 1
+        },
+        "move": {
+            "enable": true,
+            "speed": 5,
+            "direction": "none",
+            "random": false,
+            "straight": false,
+            "out_mode": "out",
+            "bounce": false,
+            "attract": {
+                "enable": false,
+                "rotateX": 600,
+                "rotateY": 1200
+            }
+        }
+    },
+    "interactivity": {
+        "detect_on": "canvas",
+        "events": {
+            "onhover": {
+                "enable": true,
+                "mode": "repulse"
+            },
+            "onclick": {
+                "enable": true,
+                "mode": "push"
+            },
+            "resize": true
+        },
+        "modes": {
+            "grab": {
+                "distance": 400,
+                "line_linked": {
+                    "opacity": 1
+                }
+            },
+            "bubble": {
+                "distance": 400,
+                "size": 40,
+                "duration": 2,
+                "opacity": 8,
+                "speed": 3
+            },
+            "repulse": {
+                "distance": 200,
+                "duration": 0.4
+            },
+            "push": {
+                "particles_nb": 4
+            },
+            "remove": {
+                "particles_nb": 2
+            }
+        }
+    },
+    "retina_detect": false
+});
+   </script>
+
+</body>
+
+</html>
